@@ -48,7 +48,7 @@
         android:id="@+id/undo_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:text="@string/undo"
         android:textAllCaps="false"
@@ -104,12 +104,14 @@
 
     <Button
         android:id="@+id/equal_btn"
-        android:layout_width="40dp"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:text="@string/equal"
+        android:gravity="start|center_vertical"
         android:background="@android:color/transparent"
         android:textColor="#2962ff"
-        android:textSize="24sp"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/divide_btn"
         app:layout_constraintTop_toTopOf="@+id/divide_btn" />
 
@@ -117,11 +119,12 @@
         android:id="@+id/redo_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/redo"
-        android:textSize="18sp"
-        android:textAllCaps="false"
         android:background="@android:color/transparent"
+        android:text="@string/redo"
+        android:textAllCaps="false"
         android:textColor="#2962ff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/operand_editText"
         app:layout_constraintStart_toEndOf="@+id/equal_btn"
         app:layout_constraintTop_toTopOf="@+id/equal_btn" />
 
@@ -137,5 +140,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiply_btn" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:background="@android:color/transparent"
+        android:textColor="#2962ff"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
